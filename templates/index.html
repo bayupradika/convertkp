@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File Converter</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        #status.hidden {
+            display: none;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container-fluid">
+            <div class="head">
+                <a class="navbar-brand" href=""><img src="../static/images/logo.png" alt="Nama Alternatif Gambar"></a>
+            </div>
+            <div class="head">
+                <a class="navbar-brand" href=""><img src="../static/images/profil-icon.png"
+                        alt="Nama Alternatif Gambar"></a>
+            </div>
+        </div>
+    </nav>
+    <div class="isi"></div>
+    <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span>
+
+        <div class="signin">
+            <div class="content">
+                <h2>Selamat Datang di halaman konversi</h2>
+                <p>Klik Tombol Dibawah ini Untuk Mulai Mengkonversi</p>
+                <div class="inputBox"
+                    style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <form action="/upload_and_convert" method="post" enctype="multipart/form-data"
+                        style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
+                        <input type="file" name="file" multiple
+                            style="color: white; background-color: #128612; margin: 0 5px;">
+                        <button type="submit" id="convertLink">Convert</button>
+                        <button onclick="downloadAllFiles()"
+                            style="padding: 5px 7px; background-color: #fff; color: #128612; border-radius: 5px;">Download</button>
+                        <div id="status" class="hidden">
+                            File Sedang di konversi
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <div class="isi">
+
+    </div>
+
+
+    <footer>
+        <div class="socials">
+            <a href="https://wa.me/08979633430"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/bayu-pradika09/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/bayu.pradika.92"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/bayu_pradika09?igshid=MzNlNGNkZWQ4Mg=="><i class="fab fa-instagram"></i></a>
+            <a href="https://cobakuy.com/"><i class="fas fa-globe"></i></a>
+        </div>
+        <div class="credit">
+            <p>Created By <span><a href="bayupradika09.site">Bayu Pradika </a></span>X <span><a
+                        href="unri.ac.id">Universitas Riau</a></span>. | &copy; 2023</p>
+        </div>
+    </footer>
+    </div>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function downloadAllFiles() {
+            // Buka halaman Firebase Storage menggunakan window.open
+            window.open('https://console.firebase.google.com/u/0/project/convert-f4bb1/storage/convert-f4bb1.appspot.com/files', '_blank');
+        }
+    
+        function convertFiles() {
+            // Show the status message
+            document.getElementById('status').classList.remove('hidden');
+    
+            document.getElementById('convertLink').disabled = true;
+            document.getElementById('downloadAllLink').style.pointerEvents = 'none'; // Nonaktifkan tombol "Download All"
+            fetch('/convert', { method: 'GET' })
+                .then(response => {
+                    if (response.ok) {
+                        // The conversion is initiated successfully
+                        checkConversionStatus();
+                    } else {
+                        alert('Failed to initiate file conversion.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to initiate file conversion.');
+                })
+                .finally(() => {
+                    // Hide the status message after a delay (adjust the delay as needed)
+                    setTimeout(() => {
+                        document.getElementById('status').classList.add('hidden');
+                    }, 3000); // Hide after 3 seconds (adjust as needed)
+                });
+        }
+    </script>
+        
+</body>
+</html>
